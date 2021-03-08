@@ -1,11 +1,16 @@
 package com.quinbay.test.Pages;
 
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 public class LoginPage {
 
+    WebDriver driver;
+    public LoginPage(WebDriver driver1){
+        driver=driver1;
+    }
     @FindBy(xpath = "//input[@class='form__input login__username']")
     WebElement Login_usr;
     @FindBy(xpath = "//input[@class='form__input login__password']")
@@ -24,8 +29,9 @@ public class LoginPage {
     WebElement otp4;
     @FindBy(xpath = "//button[@class='blu-btn otp__confirm-button b-full-width b-secondary']")
     WebElement otpsubmit;
-    public void Login(String usr_name,String password){
+    public void Login(String usr_name,String password) throws InterruptedException {
         Login_usr.sendKeys(usr_name);
+        Thread.sleep(100);
         Login_pass.sendKeys(password);
     }
     public void Submit(){

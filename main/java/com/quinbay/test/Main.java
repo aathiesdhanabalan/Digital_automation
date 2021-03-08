@@ -1,13 +1,5 @@
 package com.quinbay.test;
 
-import java.util.concurrent.TimeUnit;
-
-import com.quinbay.test.Actions.LoginAction;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.remote.DesiredCapabilities;
-
 public class Main {
 
     public static void main(String[] args) throws InterruptedException {
